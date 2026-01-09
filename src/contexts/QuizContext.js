@@ -48,7 +48,7 @@ function reducer(state, action) {
           selectedOption: null,
           currentQuestion: state.currentQuestion + 1,
         };
-      return { ...state, status: "finish" };
+      return { ...state, status: "finish", score: state.score + 1 };
 
     case "btn/error":
       return { ...state };
