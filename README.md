@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# 🧠 Quiz App (Context API + useReducer Practice)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **refactored version of the Quiz App**, rebuilt to **practice the Context API section** after completing it in  
+**The Ultimate React Course** by *Jonas Schmedtmann* on Udemy.
 
-## Available Scripts
+The goal of this version is to learn **when and how to combine Context API with `useReducer`** for shared application state.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Project Purpose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Practice **Context API** in a real project
+- Combine **Context API + useReducer**
+- Eliminate prop drilling
+- Understand **global vs local state**
+- Learn trade-offs of using Context
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> ⚠️ Context API is used here **for learning purposes**.  
+> In a real production scenario, this app could work perfectly without Context.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧩 Features
 
-### `npm run build`
+- Select quiz subject
+- Answer quiz questions
+- Submit and navigate between questions
+- Calculate final score
+- Restart quiz
+- Global theme toggle (light / dark)
+- Centralized error & loading handling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- JavaScript (ES6+)
+- Context API
+- `useReducer`
+- CSS
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧠 State Management Strategy
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔹 Why Context API?
+In this version, Context API is used to:
+- Share quiz state across **multiple components**
+- Avoid passing `state` and `dispatch` deeply through props
+- Centralize application logic in one place
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔹 Why still use `useReducer`?
+- Complex state transitions
+- Clear action-based updates
+- Predictable state flow
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🌍 Global State (Context)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The Quiz Context provides access to:
+- Quiz data
+- Current question index
+- Selected answer
+- Score
+- Theme
+- Application status
+- Dispatch function
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+All consuming components read from the same **single source of truth**.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔁 Reducer Actions
 
-### Analyzing the Bundle Size
+Handled actions include:
+- `data/receive`
+- `subject/select`
+- `option/select`
+- `btn/submit`
+- `btn/next`
+- `theme/toggle`
+- `again`
+- `error`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Each action represents a clear user interaction.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🎓 What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- When Context API is useful (shared global state)
+- When Context API is unnecessary (local state)
+- How to combine Context with `useReducer`
+- How to refactor an app to remove prop drilling
+- The cost of overusing Context
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📌 Important Note
 
-### `npm run build` fails to minify
+This project intentionally uses **Context API for practice**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For a single-page app with shallow component depth:
+- `useReducer` alone is often enough
+- Context API may add unnecessary complexity
+
+This refactor was done **to understand Context deeply**, not because it was required.
+
+ 
+ 
+ 
+
+ 
+
+
+ 
