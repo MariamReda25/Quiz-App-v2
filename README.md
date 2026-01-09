@@ -1,7 +1,7 @@
 # 🧠 Quiz App (Context API + useReducer Practice)
 
 This project is a **refactored version of the Quiz App**, rebuilt to **practice the Context API section** after completing it in  
-**The Ultimate React Course** by *Jonas Schmedtmann* on Udemy.
+**The Ultimate React Course** by _Jonas Schmedtmann_ on Udemy.
 
 The goal of this version is to learn **when and how to combine Context API with `useReducer`** for shared application state.
 
@@ -45,12 +45,15 @@ The goal of this version is to learn **when and how to combine Context API with 
 ## 🧠 State Management Strategy
 
 ### 🔹 Why Context API?
+
 In this version, Context API is used to:
+
 - Share quiz state across **multiple components**
 - Avoid passing `state` and `dispatch` deeply through props
 - Centralize application logic in one place
 
 ### 🔹 Why still use `useReducer`?
+
 - Complex state transitions
 - Clear action-based updates
 - Predictable state flow
@@ -60,6 +63,7 @@ In this version, Context API is used to:
 ## 🌍 Global State (Context)
 
 The Quiz Context provides access to:
+
 - Quiz data
 - Current question index
 - Selected answer
@@ -75,6 +79,7 @@ All consuming components read from the same **single source of truth**.
 ## 🔁 Reducer Actions
 
 Handled actions include:
+
 - `data/receive`
 - `subject/select`
 - `option/select`
@@ -85,7 +90,6 @@ Handled actions include:
 - `error`
 
 Each action represents a clear user interaction.
-
 
 ---
 
@@ -104,16 +108,12 @@ Each action represents a clear user interaction.
 This project intentionally uses **Context API for practice**.
 
 For a single-page app with shallow component depth:
+
 - `useReducer` alone is often enough
 - Context API may add unnecessary complexity
 
 This refactor was done **to understand Context deeply**, not because it was required.
 
- 
- 
- 
+## Live Demo :
 
- 
-
-
- 
+[quiz-app](https://quiz-app-v2-seven.vercel.app/)
