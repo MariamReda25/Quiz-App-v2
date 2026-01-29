@@ -1,7 +1,6 @@
 # 🧠 Quiz App (Context API + useReducer Practice)
 
-This project is a **refactored version of the Quiz App**, rebuilt to **practice the Context API section** after completing it in  
-**The Ultimate React Course** by _Jonas Schmedtmann_ on Udemy.
+This project is a **refactored version of the Quiz App**, rebuilt to **self-practice the Context API section**
 
 The goal of this version is to learn **when and how to combine Context API with `useReducer`** for shared application state.
 
